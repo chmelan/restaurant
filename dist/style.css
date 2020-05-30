@@ -1,0 +1,116 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url(https://civileats.com/wp-content/uploads/2013/10/shutterstock_139156931.jpg) no-repeat center center fixed; 
+    background-size: cover;
+    color: #04030f;
+    min-width: 900px;
+}
+nav{
+font-size: 25px;
+width: 100%;
+display:flex;
+justify-content:flex-end;
+background-color: #f4c95d;
+box-shadow: 3px 3px 26px -4px rgba(0,0,0,0.75);
+}
+h1{
+    font-size: 50px;
+    text-shadow: 2px 2px black;
+    color: white;
+}
+h2{
+    font-size: 40px;
+    text-shadow: 2px 2px black;
+    color: white;
+    font-style: italic;
+}
+.reviewContainer{
+    display: flex;
+    flex-direction: row;
+}
+.reviewEgg{
+    display: flex;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: 10px;
+    font-size:30px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    width: 250px;
+  height: 250px;
+  border-radius: 80% 25% 55% 50% / 55% 25% 80% 50%;
+  border: 3px solid #854d27;
+  transform: rotate(-45deg);
+  background-color: blanchedalmond;
+  padding:10px;
+  box-shadow: 3px 3px 26px -4px rgba(0,0,0,0.75);
+}
+.reviewEgg:hover{
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+animation: reviewShake 0.5s;
+
+/* When the animation is finished, start again */
+animation-iteration-count: infinite;
+}
+@keyframes reviewShake {
+    0% { transform: rotate(-45deg); }
+   80% { transform: rotate(-45deg); }
+   85% { transform: rotate(-43deg); }
+   95% { transform: rotate(-47deg); }
+  100% { transform: rotate(-45deg); }
+  }
+.reviewText{
+    transform: rotate(45deg);
+}
+.eggRating{
+    width: 30px;
+    height: 30px;
+}
+.navButton{
+    background-color: #dd7230;
+    padding-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transition: 0.2s;
+}
+.navButton:hover{
+    border-bottom: 6px solid #854d27;
+}
+
+.navLogo{
+    height: 50px;
+    margin: 5px 10px 5px 10px;
+}
+.navLogo:hover {
+/* Start the shake animation and make the animation last for 0.5 seconds */
+animation: shake 0.5s;
+
+/* When the animation is finished, start again */
+animation-iteration-count: infinite;
+}
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+   80% { transform: rotate(0deg); }
+   85% { transform: rotate(5deg); }
+   95% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+  }
+
+ 
+
+.navPageTitle{
+    font-size: 30px;
+    margin: 5px auto 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bodyPageTitle{
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+}
