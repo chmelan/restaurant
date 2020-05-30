@@ -1,3 +1,6 @@
+
+import{renderInitialLoad} from "./inital-load"
+import{aboutTab} from "./about-tab"
 const content = document.querySelector("#content")
 content.innerHTML = ` <nav>
 <img class="navLogo" src="https://image.flaticon.com/icons/png/512/44/44506.png">
@@ -6,34 +9,31 @@ content.innerHTML = ` <nav>
 <button class="navButton" id="navMenuButton">Menu</button>
 <button class="navButton" id="navContactButton">Contact</button>
 </nav>
-<div class="bodyPageTitle">
-<h1>Elmer's Eggselent Emporium</h1>
-<h2>You need eggs? We have eggs. So many eggs.</h2>
-</div>
-<div class="reviewContainer">
-<div class="reviewEgg">
-    <div class="reviewText">
-        <img class="eggRating" src="https://image.flaticon.com/icons/png/512/44/44506.png">
-        <img class="eggRating" src="https://image.flaticon.com/icons/png/512/44/44506.png">
-        <img class="eggRating" src="https://image.flaticon.com/icons/png/512/44/44506.png">
-        <img class="eggRating" src="https://image.flaticon.com/icons/png/512/44/44506.png">
-        <img class="eggRating" src="https://image.flaticon.com/icons/png/512/44/44506.png">
-        <p>Wow! Abslutely eggceptional customer service!<br>-Suzie </p>
-    </div>
-</div>
-<div class="reviewEgg">
-    <div class="reviewText">
-        <img class="eggRating" src="https://image.flaticon.com/icons/png/512/44/44506.png">
-        <p>The owner was too eggcentric for me.<br>-Greg</p>
-    </div>
-</div>
-<div class="reviewEgg">
-    <div class="reviewText">
-        <img class="eggRating" src="https://image.flaticon.com/icons/png/512/44/44506.png">
-        <img class="eggRating" src="https://image.flaticon.com/icons/png/512/44/44506.png">
-        <img class="eggRating" src="https://image.flaticon.com/icons/png/512/44/44506.png">
-        <img class="eggRating" src="https://image.flaticon.com/icons/png/512/44/44506.png">
-        <p>It's eggactly what you'd expect.<br>-Nik </p>
-    </div>
-</div>
-</div>`
+<div class="tabContent"></div>`
+const tabContent = document.querySelector(".tabContent")
+const homeButton = document.querySelector(".navLogo")
+const aboutButton = document.querySelector("#navAboutButton")
+const menuButton = document.querySelector("#navMenuButton")
+const contactButton = document.querySelector("#navContactButton")
+
+
+function renderAboutTab(){
+    aboutTab(tabContent)
+}
+function renderMenuTab(){
+    tabContent.innerHTML = `<div>Menu stuff</div>`
+}
+function renderContactTab(){
+    tabContent.innerHTML = `<div>Contact stuff</div>`
+}
+function renderHomeTab(){
+    renderInitialLoad(tabContent)
+}
+
+
+
+renderInitialLoad(tabContent);
+homeButton.addEventListener("click", renderHomeTab)
+aboutButton.addEventListener("click", renderAboutTab)
+menuButton.addEventListener("click", renderMenuTab)
+contactButton.addEventListener("click", renderContactTab)

@@ -114,3 +114,28 @@ animation-iteration-count: infinite;
     margin-top: 50px;
     flex-direction: column;
 }
+.aboutTab{
+   background-color: #854d27; 
+   padding: 10px;
+}
+.aboutTabHeading{
+    text-align: center;
+    font-size: 25px;
+    margin: 10px;
+    padding: 10px;
+    background-color: blanchedalmond;
+    border-radius: 15px;
+}
+.aboutTabFactContainer{
+    display: flex;
+    flex-direction: row;
+}
+.aboutTabTextDiv{
+    text-align: center;
+    font-size: 20px;
+    flex: 1;
+    margin: 5px 10px 5px 10px;
+    background-color: blanchedalmond;
+    border-radius: 15px;
+    padding: 10px;
+}
