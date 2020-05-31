@@ -1,6 +1,8 @@
 
 import{renderInitialLoad} from "./inital-load"
 import{aboutTab} from "./about-tab"
+import{menuTab} from "./menu-tab"
+import{contactTab} from "./contact-tab"
 const content = document.querySelector("#content")
 content.innerHTML = ` <nav>
 <img class="navLogo" src="https://image.flaticon.com/icons/png/512/44/44506.png">
@@ -21,10 +23,10 @@ function renderAboutTab(){
     aboutTab(tabContent)
 }
 function renderMenuTab(){
-    tabContent.innerHTML = `<div>Menu stuff</div>`
+    menuTab(tabContent)
 }
 function renderContactTab(){
-    tabContent.innerHTML = `<div>Contact stuff</div>`
+    contactTab()
 }
 function renderHomeTab(){
     renderInitialLoad(tabContent)
