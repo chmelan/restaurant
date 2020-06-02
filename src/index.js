@@ -26,7 +26,7 @@ function renderMenuTab(){
     menuTab(tabContent)
 }
 function renderContactTab(){
-    contactTab()
+    contactTab(tabContent)
 }
 function renderHomeTab(){
     renderInitialLoad(tabContent)
